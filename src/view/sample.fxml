@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" styleClass="background" stylesheets="@Style.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
+    <MenuBar>
+        <Menu mnemonicParsing="false" text="Опции">
+            <MenuItem mnemonicParsing="false" onAction="#startClient" text="Подключиться" />
+        </Menu>
+    </MenuBar>
+    <HBox prefHeight="197.0" prefWidth="400" GridPane.rowIndex="1">
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <TextArea fx:id="userList" editable="false" prefColumnCount="5" prefHeight="200.0" prefRowCount="50" prefWidth="200.0" wrapText="true">
+                <VBox.margin>
+                    <Insets left="5.0" />
+                </VBox.margin>
+            </TextArea>
+        </VBox>
+        <VBox prefHeight="114.0" prefWidth="300">
+            <TextArea fx:id="messageWindow" editable="false" prefHeight="200.0" prefWidth="300.0">
+                <VBox.margin>
+                    <Insets left="5.0" right="5.0" />
+                </VBox.margin>
+            </TextArea>
+        </VBox>
+    </HBox>
+    <HBox prefHeight="35.0" prefWidth="400" GridPane.rowIndex="2">
+        <HBox prefHeight="35.0" prefWidth="297.0">
+            <TextField fx:id="textField" onAction="#send" prefHeight="25.0" prefWidth="272.0" promptText="Введите сообщение...">
+                <HBox.margin>
+                    <Insets left="5.0" />
+                </HBox.margin>
+            </TextField>
+        </HBox>
+        <HBox prefHeight="35.0" prefWidth="100.0">
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#send" prefHeight="25.0" prefWidth="81.0" text="Отправить" textAlignment="CENTER" />
+        </HBox>
+    </HBox>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
